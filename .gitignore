@@ -1,0 +1,39 @@
+# ==========================================
+# Patrick Quinn Performance Manual
+# Python Git Ignore
+# ==========================================
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.log
+
+# Generated reports (keep folders, ignore generated outputs)
+reports/generated/
+figures/generated/
+processed/
