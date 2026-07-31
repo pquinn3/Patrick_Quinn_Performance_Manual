@@ -96,6 +96,28 @@ class Ride:
             return self.df[column].iloc[-1]
         return None
 
+    def elevation_gain(self):
+
+        if not self.has_column("altitude_m"):
+            return None
+
+        total_gain = 0
+
+        altitudes = self.df["altitude_m"]
+
+        previous = altitudes.iloc[0]
+
+        for current in altitudes.iloc[1:]:
+
+            difference = current - previous
+
+            if difference > 0:
+                total_gain += difference
+
+            previous = current
+
+        return total_gain
+
     def total_seconds(self):
 
         start = pd.to_datetime(self.first("timestamp"))
